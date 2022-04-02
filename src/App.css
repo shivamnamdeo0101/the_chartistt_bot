@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+:root { 
+	--blue-color: #2e81f5;
+	--white-color: #fff;
+	--headline-color: #e8ff3d;
+	--light-bg-color:  #5f658a;
+	--small-font: 0.8rem;
+	--mid-font: 1rem;
+	--large-font:1.5rem;
+	--very-large-font:2rem;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.App{
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.loading{
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	overflow: hidden;
+  	position: fixed;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+/***Auth Login Signup Pages **/
+
+.Auth{
+	height: 100vh;
+	background: #f0f3f5;
+	display:flex;
+	flex-direction: column;
+	justify-content:space-evenly;
+	align-items: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+.left_comp{
+	background: #fff;
+	padding: 1rem;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left_comp>h1{
+	color:var(--blue-color);
+	margin-bottom: 10px;
+	font-family: 'Pacifico';
+}
+.left_comp>p{
+	color:#444;
+	margin-bottom: 10px;
+	font-size: 0.8rem;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+
+
+.trade_grid{	
+
+	
+	
+}
+
+.trade_grid_comp{
+	background-color: #fff;
+	padding: 16px;
+	margin-bottom: 10px;
+	border-radius: 16px;
+	box-shadow: 5px 5px -7px #2e81f5;
+}
+
+
+/******home_flex**************/
+/*********Dasjboard **************/
+
+.dashboard{
+	background-color: #f0f3f5;
+	padding:2rem;
+	height:100%;
+	max-height: fit-content;
+}
+
+.dash_row{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.dashbord_head_icon{
+	width:18vw;
+}
+.dashbord_head_icon>i{
+	background-color: #fff;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.dashbord_head_icon>img{
+	width: 30px;
+	height: 30px;
+
 }

@@ -1,0 +1,129 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: fit-content;
+}
+.cover_comp{
+    margin:10px;
+}
+.head_row{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.head_row_mid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.head_row>h5{
+    margin-left: 10px;
+    cursor: pointer;
+    color: #666;
+}
+.head_row>h5:hover{
+    color: blue;
+}
+.head_row_button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.head_row_button>h3{
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    
+}
+.grey_button{
+    background-color: #f8f8f8;
+    padding:14px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    border:1px solid #ccc;
+}
+.blue_button{
+    background-color: #2e81f5;
+    padding:14px 16px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 14px;
+}
+
+.cover_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:25rem;
+}
+.cover_data>p{
+    color: #666;
+}
+.cover_row_button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.color_blue{
+    color:#2e81f5;
+    background-color:transparent;
+}
+
+.curr_market{
+    background-color: #f0f3f5;
+    padding: 14px;
+}
+.mkt_head>h1{
+    text-align: center;
+}
+.mkt_head>p{
+    color: #666;
+    text-align: center;
+    padding:3vw;
+}
+.mkt_grid_head{
+    text-align:center;
+}
+.mkt_grid_section{
+    border:1px solid #ccc;
+    border-radius: 20px;
+    padding: 16px;
+}
+.stock_comp_head{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    padding: 10px 14px;
+    margin: 10px;
+}
+.stock_comp{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+}
+
+.mk_grid{
+    margin-top: 10px;
+}
+.stk_child{
+    margin-bottom: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    padding:10px 14px;
+}
+.stk_child:hover{
+    background-color: #f8f8f8;
+}
+.red_color{
+    color: red;
+}
+.green_color{
+    color: green;
+}

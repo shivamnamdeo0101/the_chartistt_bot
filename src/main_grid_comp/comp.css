@@ -1,0 +1,123 @@
+.main_grid{
+    display:grid;
+    grid-template-columns:0.5fr 7fr 2.5fr;
+    grid-gap:16px;
+    margin-top: 16px;
+    
+}
+
+.side_col{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.side_nav{
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.side_nav>i{
+    font-size:35px;
+    color: darkblue;
+}
+.side_nav_icon>i{
+    font-size:18px;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buy_now{
+    word-break: keep-all;
+    position: fixed;
+    z-index: 2;
+    bottom:50px;
+    background-color: green;
+    color: #fff;
+    padding: 16px;
+    left:20px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.buy_now:hover{
+    background-color: #2e5;
+    border:1px solid #fff;
+}
+
+/**********holding***/
+
+.holding{
+    background-color: #fff;
+    padding:16px;
+    border-radius: 16px;
+}
+
+.transactions{
+    font-size: 14px;
+    color: #555;
+    
+}
+
+.holding{
+    font-size: 14px;
+    color: #555;
+    
+}
+
+.transactions_list{
+    padding: 10px;
+    max-height: 40vh;
+    overflow-y: scroll;
+}
+
+.tl_comp{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.tl_comp_head>i{
+    font-size: 16px;
+    padding: 16px;
+}
+.green_bg_color{
+    background-color: #1003;
+    margin-right: 12px;
+    border-radius: 10px;;
+}
+.red_bg_color{
+    background-color: #f003;
+    margin-right: 12px;
+    border-radius: 10px;;
+
+}
+.hold_comp{
+    font-size: 12px;
+}
+.tl_comp>h5{
+    padding: 16px 16px;
+    background-color: blue;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*********account*********/
+.account{
+    background-color: #fff;
+    padding:16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}

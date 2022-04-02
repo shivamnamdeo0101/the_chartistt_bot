@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "nft-gram",
+    "nft-gram": "nft-gram"
+  },
+  "targets": {}
+}
