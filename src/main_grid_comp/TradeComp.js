@@ -10,8 +10,7 @@ function TradeComp() {
                     <TradingViewWidget
                     symbol="BSE:SBIN"
                     locale="fr"
-                    height="350"
-                    width="auto"
+                  
                     timezone= "Etc/UTC"
                 />
     

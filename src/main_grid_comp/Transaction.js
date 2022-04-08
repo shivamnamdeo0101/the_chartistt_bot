@@ -1,7 +1,56 @@
-import React from 'react'
+import React,{useEffect,useState,useContext} from 'react'
 import "./comp.css";
+import firebase from "../base.js";
+import { AuthContext } from "../Auth.js";
+import Loading from "../Loading";
+import moment from "moment";
 
 function Transaction() {
+
+  const [transaction, settransaction] = useState([]);
+  const { currentUser } = useContext(AuthContext);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+
+    const subscriber = firebase.firestore()
+      .collection('users')
+      .doc(currentUser.email)
+      .collection('transactions')
+      .orderBy('timestamp','desc')
+      .onSnapshot(querySnapshot => {
+        
+        const t_list_ = [];
+  
+        querySnapshot.forEach(doc => {
+
+          
+             t_list_.push({
+                ...doc.data(),
+                 key: doc.id
+            });
+         
+           
+                  
+        
+        });
+    
+        settransaction(t_list_);
+        setLoading(false);
+      });
+  
+    
+    return () => subscriber();
+  }, []); 
+
+
+
+  if(loading){
+    return(
+      <div>
+        <Loading />
+      </div>
+    )
+  }
   return (
     <div className='transactions'>
 
@@ -11,27 +60,25 @@ function Transaction() {
 
             <div className='transactions_list'>
 
-            {["1","2","3","4"].map((item,index) => (
+            {transaction.map((item,index) => (
 
                 <div className='tl_comp' key={index}>
                     <div className='tl_comp_head tl_comp'>
-                        {index%2 == 0 ? <i class="fa fa-long-arrow-up green_color green_bg_color" aria-hidden="true"></i>:
-                        <i class="fa fa-long-arrow-down red_color red_bg_color" aria-hidden="true"></i>
+                         <i className="fa fa-check-circle green_color green_bg_color" aria-hidden="true"></i>
 
-                      }
+                
                         <div className='tl_head_data'>
-                            <h5>SBI</h5>
-                            <p>02-04-2022</p>
+                            <h5>{item.stock_name}</h5>
+                            <p>{moment(item.timestamp).format("LLL")}</p>
+                            <p>{item.sbi_stock_price}</p>
                         </div>
                        
                     </div>
 
-                    {
-                        index%2 == 0?
-                        <p className="green_color">32000.00</p>
-                        :
-                        <p className="red_color">-32000.00</p>
-                    }
+                  
+                        <p >Amount : {item.amount}.00<br></br>Stocks : {item.how_much}</p>
+                       
+                        
                     
 
                 </div>

@@ -21,8 +21,22 @@ const SignUp = ({ history }) => {
         email:email,
         name:name,
         avatar:imageUrl,
-
+        virtual_money:1000
       })
+
+      app.firestore()
+    .collection('users')
+    .doc(email)
+    .collection('holdings')
+    .doc('sbi')
+		.set({
+      timestamp:Date.now(),
+      stock_name:'SBI',
+      amount:0,
+      how_much:0,
+      sbi_stock_price:0
+
+    },{merge:true});
   
       history.push("/DashBoard");
     } catch (error) {

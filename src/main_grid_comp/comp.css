@@ -36,19 +36,8 @@
     cursor: pointer;
 }
 
-.buy_now{
-    word-break: keep-all;
-    position: fixed;
-    z-index: 2;
-    bottom:50px;
-    background-color: green;
-    color: #fff;
-    padding: 16px;
-    left:20px;
-    border-radius: 16px;
-    cursor: pointer;
-}
-.buy_now:hover{
+
+.buy_now_button:hover{
     background-color: #2e5;
     border:1px solid #fff;
 }
@@ -75,8 +64,7 @@
 
 .transactions_list{
     padding: 10px;
-    max-height: 40vh;
-    overflow-y: scroll;
+    
 }
 
 .tl_comp{
@@ -120,4 +108,38 @@
     margin-bottom: 10px;
     font-size: 14px;
     color: #555;
+}
+
+.sell_button{
+    background-color: #2a5;
+    text-align: center;
+    color: #fff;
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.buy_now{
+   margin-top: 16px;
+   border: 1px solid #cccc;
+   padding: 10px;
+   border-radius: 8px;
+   
+}
+.buy_now>input{
+    width:98%;
+ 
+}
+.buy_now_button{
+    background-color: #2a5;
+    text-align: center;
+    color: #fff;
+    padding: 10px 14px;
+    margin-top: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
 }

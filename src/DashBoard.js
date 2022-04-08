@@ -16,14 +16,14 @@ function DashBoard() {
 				<h4>The Chartistt Bot</h4>
 
 				<div className='dashbord_head_icon dash_row'>
-					<i class="fa fa-search" aria-hidden="true"></i>
-					<i class="fa fa-bell" aria-hidden="true"></i>
+					<i className="fa fa-search" aria-hidden="true"></i>
+					<i className="fa fa-bell" aria-hidden="true"></i>
 
-					<i class="fa fa-cog" aria-hidden="true"></i>
+					<i className="fa fa-cog" aria-hidden="true"></i>
 
 					<IconButton onClick={()=>firebase.auth().signOut()}>
-					<LogoutIcon color="error" />
-				</IconButton>
+						<LogoutIcon color="error" />
+					</IconButton>
 					<img src="https://t3.ftcdn.net/jpg/03/91/19/22/360_F_391192211_2w5pQpFV1aozYQhcIw3FqA35vuTxJKrB.jpg" alt=""/>
 
 				</div>
