@@ -10,7 +10,7 @@ function Holding() {
   const { currentUser } = useContext(AuthContext);
   const [prev_sbi_hold, setprev_sbi_hold] = useState({});
   const [loading, setLoading] = useState(true);
-  const [sbi_stock_price, setsbi_stock_price] = useState(200);
+  const [sbi_stock_price, setsbi_stock_price] = useState(0);
   var [virtual_money, setvirtual_money] = useState(0);
   const [amount, setamount] = useState(0);
   useEffect(() => {
@@ -48,7 +48,7 @@ function Holding() {
   }, [prev_sbi_hold]); 
 
   useEffect(() => {
-    //fetchData();
+   fetchData();
     setLoading(false);    
 }, [sbi_stock_price])
 
@@ -56,7 +56,7 @@ function Holding() {
 const fetchData = async () => {
   const data = await fetch('https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=SBI&apikey=3RZH8V2IIUNDXFPX');
   const res = await data.json();
-  setsbi_stock_price(res["Global Quote"]["05. price"] * 62);
+  setsbi_stock_price(res["Global Quote"]["05. price"] * 63.2);
 }
 
   const buy_now = ()=>{
